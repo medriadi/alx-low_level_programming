@@ -1,10 +1,11 @@
 #include <stdio.h>
 
+/**
+ * main - display  "Programming is like building a multilingual puzzle"
+ * Return: 0 and exit the program (Success)
+ */
 int main(void)
 {
-    /* Use the 'puts' function to print the desired message followed by a newline */
-    puts("Programming is like building a multilingual puzzle\n");
-
-    /* Return 0 to indicate successful program execution */
-    return (0);
+	puts("\"Programming is like building a multilingual puzzle");
+	return (0);
 }
