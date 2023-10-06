@@ -1,11 +1,11 @@
 #include <stdlib.h>
-#include <time.>
+#include <time.h>
 #include <stdio.h>
 
 /**
- * main - programn entry point.
+ * main - program entry point.
  *
- * Description - Determines if  l is greater than 5, is less than 6, or is 0.
+ * Description - Determines if l is greater than 5, is less than 6, or is 0.
  *
  * Return: Always 0 (Success)
  */
