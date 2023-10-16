@@ -5,8 +5,7 @@
  * rev_string - Reverse a string.
  * @s: A pointer to a null-terminated string.
  *
- * Description: This function reverses the characters of the input string 
- * 				in place.
+ * Description: function reverses the characters of the input string in place.
  */
 void rev_string(char *s)
 {
