@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - display  "Programming is like building a multilingual puzzle"
- * Return: 0 and exit the program (Success)
+ * main - Entry point of the program, displays a message.
+ *
+ * Return: Always returns 0 to exit the program (Success).
  */
 int main(void)
 {

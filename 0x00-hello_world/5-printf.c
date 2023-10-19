@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - displays "with proper grammar" with new line
- * Return: 0 and exit the program
+ * main - Entry point of the program, displays a message with proper grammar.
+ *
+ * Return: Always returns 0 to exit the program.
  */
 int main(void)
 {

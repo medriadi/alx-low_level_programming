@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - display the size of data types
- * Return: 0 and exit the program.
+ * main - Entry point of the program, displays the size of data types.
+ *
+ * Return: Always returns 0 to exit the program.
  */
 int main(void)
 {

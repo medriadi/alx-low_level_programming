@@ -2,9 +2,9 @@
 #include <unistd.h>
 
 /**
- * main - display "and that piece of art is useful" in console
- * followed by a new line, to the standard error
- * Return: 1 and exit the program
+ * main - Entry point of the program, displays an error message.
+ *
+ * Return: Always returns 1 to exit the program.
  */
 int main(void)
 {
