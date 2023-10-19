@@ -2,10 +2,8 @@
 
 /**
  * _strcat - Concatenate two strings with buffer overflow protection.
- *
  * @dest: Destination string to which src is appended.
  * @src: Source string to be concatenated to dest.
- *
  * Return: A pointer to the resulting string dest.
  */
 char *_strcat(char *dest, const char *src)
