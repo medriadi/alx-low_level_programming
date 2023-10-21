@@ -1,13 +1,16 @@
 #include <stdio.h>
 
 /**
- * main - Prints all possible different combinations of three digits.
+ * main - Program entry point. Prints all possible different combinations
+ *        of three digits between 0 and 9.
  *
  * Description: This program prints all distinct combinations of 3 different
  * digits between 0 and 9, treating permutations of the same 3 digits as
- * equivalent and printing only the smallest combination.
+ * equivalent and printing only the smallest combination. The combinations are
+ * separated by commas and spaces, and each combination is followed by a
+ * newline character.
  *
- * Return: Always 0 (Success)
+ * Return: Always returns 0 to indicate success.
  */
 int main(void)
 {

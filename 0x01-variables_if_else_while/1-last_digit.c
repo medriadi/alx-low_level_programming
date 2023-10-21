@@ -3,11 +3,13 @@
 #include <stdio.h>
 
 /**
- * main - program entry point.
+ * main - Program entry point.
  *
- * Description - Determines if l is greater than 5, is less than 6, or is 0.
+ * Description: This program generates a random number, calculates its last
+ * digit, and checks if the last digit is greater than 5, equal to 0, or less
+ * than 6 and not equal to 0. It then prints the result to the standard output.
  *
- * Return: Always 0 (Success)
+ * Return: Always returns 0 to indicate success.
  */
 int main(void)
 {

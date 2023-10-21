@@ -1,12 +1,13 @@
 #include <stdio.h>
 
 /**
- * main - Entry point of the program
+ * main - Program entry point. Prints the lowercase alphabet in reverse,
+ *        followed by a newline.
  *
- * Description: This program prints the lowercase alphabet in reverse,
- * followed by a new line.
+ * Description: This program prints the lowercase alphabet in reverse order,
+ * starting from 'z' and ending at 'a', followed by a newline character.
  *
- * Return: Always 0 (Success)
+ * Return: Always returns 0 to indicate success.
  */
 int main(void)
 {

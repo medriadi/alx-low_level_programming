@@ -1,12 +1,13 @@
 #include <stdio.h>
 
 /**
- * main - Entry point of the program
+ * main - Program entry point. Prints the lowercase alphabet excluding
+ *        'e' and 'q'followed by a newline.
  *
- * Description: This program prints the lowercase alphabet
- * excluding the letters 'q' and 'e', followed by a newline.
+ * Description: This program prints the lowercase alphabet from 'a' to 'z',
+ * excluding the letters 'e' and 'q', followed by a newline character.
  *
- * Return: Always 0 (Success)
+ * Return: Always returns 0 to indicate success.
  */
 int main(void)
 {

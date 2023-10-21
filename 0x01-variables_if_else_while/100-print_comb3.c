@@ -1,12 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - Prints all possible different combinations of two digits.
+ * main - Program entry point. Prints all possible different combinations
+ *        of two digits between 0 and 9.
  *
  * Description: This program prints all distinct combinations of two digits
- * between 0 and 9, treating "01" and "10" as the same combination.
+ * between 0 and 9, treating "01" and "10" as the same combination. The
+ * combinations are separated by commas and spaces, and each combination is
+ * followed by a newline character.
  *
- * Return: Always 0 (Success)
+ * Return: Always returns 0 to indicate success.
  */
 int main(void)
 {

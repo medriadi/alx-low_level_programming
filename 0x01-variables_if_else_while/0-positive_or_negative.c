@@ -5,9 +5,10 @@
 /**
  * main - Program entry point.
  *
- * Description - Determine if n is positive, negative or zero.
+ * Description: Program generates a random number, checks if it's positive,
+ * zero, or negative, and then prints the result to the standard output.
  *
- * Return: Always 0 (Success)
+ * Return: Always returns 0 to indicate success.
  */
 int main(void)
 {

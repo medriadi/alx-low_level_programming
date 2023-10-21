@@ -1,13 +1,14 @@
 #include <stdio.h>
 
 /**
- * main - Prints all possible combinations of two two-digit numbers.
+ * main - Program entry point. Prints all possible combinations of two
+ *        two-digit numbers in ascending order.
  *
  * Description: This program generates and prints all distinct combinations of
- * two two-digit numbers in ascending order, separated by a space and a comma
- * followed by a space.
+ * two two-digit numbers in ascending order, separated by a space, a comma,
+ * and a space. The combinations are followed by a newline character.
  *
- * Return: Always 0 (Success)
+ * Return: Always returns 0 to indicate success.
  */
 int main(void)
 {

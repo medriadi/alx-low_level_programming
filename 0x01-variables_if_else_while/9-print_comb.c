@@ -1,12 +1,13 @@
 #include <stdio.h>
 
 /**
- * main - Entry point of the program
+ * main - Program entry point. Prints numbers between 0 to 9 with commas and
+ *        spaces between them, in ascending order.
  *
- * Description: This program prints numbers between 0 to 9 with commas and
- * spaces between them, in ascending order.
+ * Description: This program prints numbers between 0 and 9 with commas and
+ * spaces between them, in ascending order, followed by a newline character.
  *
- * Return: Always 0 (Success)
+ * Return: Always returns 0 to indicate success.
  */
 int main(void)
 {

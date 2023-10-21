@@ -1,12 +1,13 @@
 #include <stdio.h>
 
 /**
- * main - Entry point of the program
+ * main - Program entry point. Prints single-digit numbers from 0 to 9
+ *        followed by a newline.
  *
- * Description: This program prints single-digit numbers from 0 to 9
- * followed by a new line.
+ * Description: This program prints single-digit numbers from 0 to 9, with
+ * each number represented as characters and followed by a newline character.
  *
- * Return: Always 0 (Success)
+ * Return: Always returns 0 to indicate success.
  */
 int main(void)
 {

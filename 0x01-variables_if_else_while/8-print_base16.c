@@ -1,12 +1,13 @@
 #include <stdio.h>
 
 /**
- * main - Entry point of the program
+ * main - Program entry point. Prints numbers in base 16 (0 to 9) and
+ *        lowercase letters 'a' to 'f', followed by a newline.
  *
- * Description: This program prints numbers between 0 to 9 and letters between
- * 'a' to 'f' in lowercase in base 16, followed by a new line.
+ * Description: This program prints numbers in base 16 (0 to 9) and lowercase
+ * letters 'a' to 'f', followed by a newline character.
  *
- * Return: Always 0 (Success)
+ * Return: Always returns 0 to indicate success.
  */
 int main(void)
 {
