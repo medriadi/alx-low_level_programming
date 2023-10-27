@@ -14,32 +14,27 @@
 */
 int main(int argc, char *argv[])
 {
-	int sum = 0;
+	int x;
+	int y;
+	int add;
 
-	if (argc == 1)
+	(void)argv;
+	add = 0;
+	if (argc > 1)
 	{
-		printf("0\n");
-		return (0);
-	}
-
-	for (int x = 1; x < argc; x++)
-
-	{
-		int num = 0;
-
-		for (int y = 0; argv[x][y] != '\0'; y++)
-
+		for (x = 1; x < argc; x++)
 		{
-			if (!isdigit(argv[x][y]))
+			for (y = 0; argv[x][y] != '\0'; y++)
 			{
-				printf("Error\n");
-				return (1);
+				if (!isdigit(argv[x][y]))
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
-			num = num * 10 + (argv[x][y] - '0');
+			add += atoi(argv[x]);
 		}
-		sum += num;
 	}
-
-	printf("%d\n", sum);
+	printf("%d\n", add);
 	return (0);
 }
