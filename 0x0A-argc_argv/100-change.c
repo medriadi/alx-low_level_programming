@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	int change, input;
 	unsigned int x;
 	char *p;
-	int coins[] = {25, 10, 5, 1};
+	int coins[] = {25, 10, 5, 2};
 
 	if (argc != 2)
 	{
