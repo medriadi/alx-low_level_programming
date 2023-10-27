@@ -13,10 +13,9 @@
 */
 int main(int argc, char *argv[])
 {
-	int change = 0;
-
+	int change, input;
+	unsigned int x;
 	char *p;
-
 	int coins[] = {25, 10, 5, 1};
 
 	if (argc != 2)
@@ -25,22 +24,29 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	int input = strtol(argv[1], &p, 10);
+	input = strtol(argv[1], &p, 10);
+	change = 0;
 
-	if (*p != '\0' || input <= 0)
+	if (!*p)
+	{
+		while (input > 1)
+		{
+			for (x = 0; x < sizeof(coins[x]); x++)
+			{
+				if (input >= coins[x])
+				{
+					change += input / coins[x];
+					input %= coins[x];
+				}
+			}
+		}
+		if (input == 1)
+			change++;
+	}
+	else
 	{
 		printf("Error\n");
 		return (1);
-	}
-
-	for (int x = 0; x < sizeof(coins) / sizeof(coins[0]); x++)
-
-	{
-		while (input >= coins[x])
-		{
-			change += input / coins[x];
-			input %= coins[x];
-		}
 	}
 
 	printf("%d\n", change);
