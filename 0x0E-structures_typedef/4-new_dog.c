@@ -1,39 +1,55 @@
+#include "dog.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include "dog.h"
 
 /**
- * new_dog - Creates a new dog and stores a copy of name and owner.
- * @name: The name of the dog.
- * @age: The age of the dog.
- * @owner: The owner of the dog.
+ * new_dog - Creates a new dog and copies the name and owner.
+ * @name: Pointer to the name of the dog.
+ * @age: Age of the dog.
+ * @owner: Pointer to the owner of the dog.
  *
- * Return: A pointer to the newly created dog structure, or NULL if it fails.
+ * Return: A pointer to the newly created dog, or NULL on failure.
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new_dog;
+	struct dog *django;
+	char *name_copy, *owner_copy;
+	int name_length = 0, owner_length = 0;
 
-	new_dog = malloc(sizeof(dog_t));
+	django = malloc(sizeof(struct dog));
+	if (django == NULL)
+		return (NULL);
 
-	if (new_dog == NULL)
+	while (name[name_length] != '\0')
+		name_length++;
+
+	while (owner[owner_length] != '\0')
+		owner_length++;
+
+	name_copy = malloc(sizeof(char) * (name_length + 1));
+	if (name_copy == NULL)
 	{
+		free(django);
 		return (NULL);
 	}
 
-	new_dog->name = strdup(name);
-	new_dog->owner = strdup(owner);
-
-	if (new_dog->name == NULL || new_dog->owner == NULL)
+	owner_copy = malloc(sizeof(char) * (owner_length + 1));
+	if (owner_copy == NULL)
 	{
-		free(new_dog->name);
-		free(new_dog->owner);
-		free(new_dog);
+		free(name_copy);
+		free(django);
 		return (NULL);
 	}
 
-	new_dog->age = age;
+	for (int i = 0; i <= name_length; i++)
+		name_copy[i] = name[i];
 
-	return (new_dog);
+	for (int i = 0; i <= owner_length; i++)
+		owner_copy[i] = owner[i];
+
+	django->name = name_copy;
+	django->age = age;
+	django->owner = owner_copy;
+
+	return (django);
 }
