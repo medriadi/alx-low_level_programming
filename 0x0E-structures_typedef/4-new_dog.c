@@ -15,6 +15,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	struct dog *django;
 	char *name_copy, *owner_copy;
 	int name_length = 0, owner_length = 0;
+	int i;
 
 	django = malloc(sizeof(struct dog));
 	if (django == NULL)
@@ -41,11 +42,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	for (int i = 0; i <= name_length; i++)
+	for (i = 0; i <= name_length; i++)
 		name_copy[i] = name[i];
 
-	for (int i = 0; i <= owner_length; i++)
+	for (i = 0; i <= owner_length; i++)
 		owner_copy[i] = owner[i];
+
 
 	django->name = name_copy;
 	django->age = age;
