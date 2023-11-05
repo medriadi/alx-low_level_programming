@@ -47,8 +47,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	for (i = 0; i <= owner_length; i++)
 		owner_copy[i] = owner[i];
-
-
 	django->name = name_copy;
 	django->age = age;
 	django->owner = owner_copy;
