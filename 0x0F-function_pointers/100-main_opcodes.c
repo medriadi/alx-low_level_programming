@@ -1,36 +1,38 @@
-#include <stdio.h>
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
-* main - program that prints the opcodes of its own main function.
-* @argc: The number of command-line arguments.
-* @argv: The array of command-line arguments.
-* Return: 0 on success, 1 on error.
+* main - Print the opcode of its own function
+*
+* @argc: Number of command-line arguments
+* @argv: Array of command-line arguments
+*
+* Return: Exit 1 if one argument is not correct, 2 if the byte is negative.
 */
 int main(int argc, char *argv[])
 {
+	short bytes, x;
+
 	if (argc != 2)
-	{
-		fprintf(stderr, "Error\n");
-		exit(1);
-	}
+{
+	printf("Error: Incorrect number of arguments. Usage: main <bytes>\n");
+	exit(1);
+}
 
-	int num_bytes = atoi(argv[1]);
+bytes = atoi(argv[1]);
 
-	if (num_bytes < 0)
-	{
-		fprintf(stderr, "Error\n");
-		exit(2);
-	}
+if (bytes < 0)
+{
+	printf("Error: Byte cannot be negative.\n");
+	exit(2);
+}
 
-	unsigned char *code = (unsigned char *) &main;
+printf("%02x", *((unsigned char *) (main)));
 
-	for (int i = 0; i < num_bytes; i++)
+for (x = 1; x < bytes; ++x)
+{
+	printf(" %02x", *((unsigned char *) (main + x)));
+}
 
-	{
-		printf("%02x", code[i]);
-	}
-	printf("\n");
-
-	return (0);
+putchar('\n');
+exit(EXIT_SUCCESS);
 }
