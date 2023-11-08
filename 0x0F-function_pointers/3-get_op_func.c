@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 /**
 * get_op_func - selects the correct function to perform the operation
 * @s: The operator passed as an argument to the program
