@@ -8,6 +8,7 @@ int op_add(int a, int b)
 {
 	return (a + b);
 }
+
 /**
  * op_sub - Subtracts two integers.
  * @a: The first integer to subtract from.
@@ -18,6 +19,7 @@ int op_sub(int a, int b)
 {
 	return (a - b);
 }
+
 /**
  * op_mul - Multiplies two integers.
  * @a: The first integer to multiply.
@@ -28,6 +30,7 @@ int op_mul(int a, int b)
 {
 	return (a * b);
 }
+
 /**
  * op_div - Divides two integers.
  * @a: The dividend.
@@ -38,12 +41,14 @@ int op_div(int a, int b)
 {
 	return (a / b);
 }
+
 /**
  * op_mod - Computes the module of two integers
  * @a: The dividend
  * @b: The divisor
  * Return: The module of the two integers
  */
+
 int op_mod(int a, int b)
 {
 	return (a % b);
