@@ -3,44 +3,28 @@
 #include "3-calc.h"
 
 /**
- * main - Entry point into the program.
- *
- * @argc: Number of command-line arguments.
- * @argv: Array of command-line argument strings.
- *
- * Return: Always 0 (Success).
+ * main - Entry point for a simple calculator program.
+ * @argc: The number of command-line arguments.
+ * @argv: An array of strings containing the command-line arguments.
+ * Return: 0 on success, 98 on error.
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2;
-	int result;
-	int (*op_func)(int, int);
-
 	if (argc != 4)
 	{
 		printf("Error\n");
-		return (1);
+		return (98);
 	}
 
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[3]);
+	int num1 = atoi(argv[1]);
+	char *operator = argv[2];
+	int num2 = atoi(argv[3]);
 
-	op_func = get_op_func(argv[2]);
+	int (*func)(int, int) = get_op_func(operator);
 
-	if (!op_func)
-	{
-		printf("Error\n");
-		return (99);
-	}
-
-	if ((argv[2][0] == '/' || argv[2][0] == '%') && num2 == 0)
-	{
-		printf("Error\n");
-		return (100);
-	}
-
-	result = op_func(num1, num2);
+	int result = func(num1, num2);
 
 	printf("%d\n", result);
+
 	return (0);
 }
