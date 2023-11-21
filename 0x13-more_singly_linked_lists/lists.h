@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 
 /**
  * struct listint_s - singly linked list
@@ -34,5 +35,6 @@ listint_t *reverse_listint(listint_t **head);
 size_t free_listint_safe(listint_t **h);
 size_t print_listint_safe(const listint_t *head);
 listint_t *find_listint_loop(listint_t *head);
+int check_ptr(const listint_t *ptr, listint_t **array, unsigned int size);
 
 #endif
