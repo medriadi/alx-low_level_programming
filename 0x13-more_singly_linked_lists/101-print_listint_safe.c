@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * print_listint_safe - prints a linked list
- * @head: pointer to the head of the list
+ * print_listint_safe - prints all the elements of a linked list
+ * @head: head of the list
  *
- * Return: the number of nodes in the list
+ * Return: the number of nodes
  */
 size_t print_listint_safe(const listint_t *head)
 {
@@ -20,19 +20,11 @@ size_t print_listint_safe(const listint_t *head)
 	{
 		if (check_ptr(cursor, ptrs, list_len) == 0)
 		{
-			write(1, "[", 1);
-			write(1, (void *)cursor, sizeof(void *));
-			write(1, "] ", 2);
-			write(1, (void *)&(cursor->n), sizeof(int));
-			write(1, "\n", 1);
+			printf("[%p] %d\n", (void *)cursor, cursor->n);
 		}
 		else
 		{
-			write(1, "[", 1);
-			write(1, (void *)cursor, sizeof(void *));
-			write(1, "] ", 2);
-			write(1, (void *)&(cursor->n), sizeof(int));
-			write(1, "\n", 1);
+			printf("[%p] %d\n", (void *)cursor, cursor->n);
 		}
 		count += 1;
 		cursor = cursor->next;
